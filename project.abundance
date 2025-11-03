@@ -35,8 +35,8 @@
     {
       "atomType": "Extrude",
       "name": "Extrude",
-      "x": 0.4258492129246064,
-      "y": 0.32298136645962733,
+      "x": 0.46439628482972134,
+      "y": 0.3074534161490683,
       "uniqueID": "89f5ea0e-101f-45dc-98f6-3d8e4cb8af95",
       "ioValues": [
         {
@@ -48,8 +48,8 @@
     {
       "atomType": "Gcode",
       "name": "Gcode",
-      "x": 0.6164043082021541,
-      "y": 0.546583850931677,
+      "x": 0.6099071207430341,
+      "y": 0.5745341614906833,
       "uniqueID": "d7bd044f-9afc-4440-9b3b-d7eb3488d3b6",
       "ioValues": [
         {
@@ -58,7 +58,8 @@
         },
         {
           "name": "Passes",
-          "ioValue": 6
+          "ioValue": 1,
+          "currentEquation": "1"
         },
         {
           "name": "Speed",
@@ -66,7 +67,8 @@
         },
         {
           "name": "Cut Through",
-          "ioValue": 0
+          "ioValue": 0,
+          "currentEquation": "0"
         },
         {
           "name": "Part Name",
@@ -75,6 +77,18 @@
       ],
       "partName": "Molecule",
       "sortDirection": "Left"
+    },
+    {
+      "atomType": "Import",
+      "name": "Import",
+      "x": 0.39422084623323017,
+      "y": 0.6086956521739131,
+      "uniqueID": "04235909-4d0d-4431-8b81-6db137dab78d",
+      "ioValues": [],
+      "fileName": "Frailejon.svg",
+      "type": "SVG",
+      "repoOwner": "alzatin",
+      "repoName": "donut_5"
     }
   ],
   "allConnectors": [
