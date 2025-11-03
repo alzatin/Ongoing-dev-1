@@ -35,8 +35,8 @@
     {
       "atomType": "Extrude",
       "name": "Extrude",
-      "x": 0.43962848297213625,
-      "y": 0.2919254658385093,
+      "x": 0.5789473684210527,
+      "y": 0.5093167701863354,
       "uniqueID": "89f5ea0e-101f-45dc-98f6-3d8e4cb8af95",
       "ioValues": [
         {
@@ -66,8 +66,7 @@
         },
         {
           "name": "Cut Through",
-          "ioValue": 0,
-          "currentEquation": "0"
+          "ioValue": 0
         },
         {
           "name": "Part Name",
@@ -160,6 +159,18 @@
           "ioValue": 5
         }
       ]
+    },
+    {
+      "atomType": "Import",
+      "name": "Import",
+      "x": 0.3859649122807018,
+      "y": 0.30434782608695654,
+      "uniqueID": "id-68",
+      "ioValues": [],
+      "fileName": "cow.svg",
+      "type": "SVG",
+      "repoOwner": "alzatin",
+      "repoName": "donut_5"
     }
   ],
   "allConnectors": [
