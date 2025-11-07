@@ -86,8 +86,7 @@
       "fileName": "Frailejon_3-converted.svg",
       "type": "SVG",
       "repoOwner": "alzatin",
-      "repoName": "donut_5",
-      "SVGwidth": 100
+      "repoName": "donut_5"
     },
     {
       "atomType": "Extrude",
@@ -135,8 +134,8 @@
     {
       "atomType": "Difference",
       "name": "Difference",
-      "x": 0.7244582043343654,
-      "y": 0.7018633540372671,
+      "x": 0.6818791946308724,
+      "y": 0.7608695652173914,
       "uniqueID": "id-29",
       "ioValues": []
     },
@@ -164,15 +163,27 @@
     {
       "atomType": "Import",
       "name": "Import",
-      "x": 0.36845637583892615,
-      "y": 0.40062111801242234,
+      "x": 0.35973154362416104,
+      "y": 0.2981366459627329,
       "uniqueID": "id-200",
       "ioValues": [],
       "fileName": "31162712_copy1.svg",
       "type": "SVG",
       "repoOwner": "alzatin",
-      "repoName": "donut_5",
-      "SVGwidth": 10
+      "repoName": "donut_5"
+    },
+    {
+      "atomType": "Circle",
+      "name": "Circle",
+      "x": 0.4929225645295587,
+      "y": 0.3198757763975155,
+      "uniqueID": "id-236",
+      "ioValues": [
+        {
+          "name": "diameter",
+          "ioValue": 10
+        }
+      ]
     }
   ],
   "allConnectors": [
