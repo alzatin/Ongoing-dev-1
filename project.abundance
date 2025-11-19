@@ -117,13 +117,11 @@
       "ioValues": [
         {
           "name": "Tool Size",
-          "ioValue": 5,
-          "currentEquation": "5"
+          "ioValue": 5
         },
         {
           "name": "Passes",
-          "ioValue": 4,
-          "currentEquation": "4"
+          "ioValue": 4
         },
         {
           "name": "Speed",
@@ -240,7 +238,7 @@
       "ap2ID": "id-100"
     }
   ],
-  "unitsKey": "Inches",
+  "unitsKey": "MM",
   "fileTypeVersion": 1,
   "compiledBom": [],
   "filetypeVersion": 1
