@@ -100,8 +100,8 @@
     },
     {
       "atomType": "Gcode",
-      "x": 0.7863756613756614,
-      "y": 0.717391304347826,
+      "x": 0.7916331456154465,
+      "y": 0.6894409937888198,
       "uniqueID": "id-203",
       "ioValues": [
         {
@@ -110,7 +110,8 @@
         },
         {
           "name": "Passes",
-          "ioValue": 4
+          "ioValue": 2,
+          "currentEquation": "2"
         },
         {
           "name": "Speed",
@@ -180,8 +181,8 @@
         },
         {
           "name": "Passes",
-          "ioValue": 2,
-          "currentEquation": "2"
+          "ioValue": 1,
+          "currentEquation": "1"
         },
         {
           "name": "Speed",
