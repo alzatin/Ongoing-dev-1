@@ -7,7 +7,11 @@
   "ioValues": [
     {
       "name": "wood",
-      "ioValue": 0
+      "ioValue": 1
+    },
+    {
+      "name": "z",
+      "ioValue": 1
     }
   ],
   "topLevel": true,
@@ -30,7 +34,7 @@
         },
         {
           "name": "y length",
-          "ioValue": 0
+          "ioValue": 1
         }
       ]
     },
@@ -179,8 +183,8 @@
     },
     {
       "atomType": "Gcode",
-      "x": 0.7357512953367876,
-      "y": 0.21428571428571427,
+      "x": 0.6982990152193375,
+      "y": 0.2173913043478261,
       "uniqueID": "id-314",
       "ioValues": [
         {
