@@ -30,8 +30,7 @@
         },
         {
           "name": "y length",
-          "ioValue": 10,
-          "currentEquation": "300"
+          "ioValue": 10
         }
       ]
     },
@@ -207,8 +206,8 @@
     },
     {
       "atomType": "Input",
-      "x": 0.031349999999999996,
-      "y": 0.5031055900621119,
+      "x": 0.0264,
+      "y": 0.16,
       "uniqueID": "id-361",
       "name": "wood",
       "type": "number"
