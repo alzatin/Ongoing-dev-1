@@ -7,11 +7,6 @@
   "ioValues": [
     {
       "name": "wood",
-      "ioValue": 10,
-      "currentEquation": "10"
-    },
-    {
-      "name": "plastic",
       "ioValue": 10
     }
   ],
@@ -24,58 +19,256 @@
       "uniqueID": "d3e25771-0f7c-4215-a122-f7c1045f96fc"
     },
     {
-      "atomType": "Input",
-      "x": 0.0264,
-      "y": 0.45652173913043476,
-      "uniqueID": "id-366",
-      "name": "wood",
-      "type": "number"
-    },
-    {
-      "atomType": "Input",
-      "x": 0.0264,
-      "y": 0.7453416149068324,
-      "uniqueID": "id-369",
-      "name": "plastic",
-      "type": "number"
-    },
-    {
-      "atomType": "Extrude",
-      "x": 0.4105839416058394,
-      "y": 0.47204968944099385,
-      "uniqueID": "id-377",
-      "ioValues": [
-        {
-          "name": "height",
-          "ioValue": 10,
-          "currentEquation": "10"
-        }
-      ]
-    },
-    {
       "atomType": "Rectangle",
-      "x": 0.26277372262773724,
-      "y": 0.40062111801242234,
-      "uniqueID": "id-381",
+      "x": 0.22281879194630874,
+      "y": 0.39751552795031053,
+      "uniqueID": "1b9e4495-2958-490f-b191-17e032057477",
       "ioValues": [
         {
           "name": "x length",
-          "ioValue": 50,
-          "currentEquation": "wood"
+          "ioValue": 20
         },
         {
           "name": "y length",
-          "ioValue": 40,
-          "currentEquation": "plastic + 30"
+          "ioValue": 10,
+          "currentEquation": "300"
         }
       ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.35448057097541635,
+      "y": 0.7888198757763976,
+      "uniqueID": "id-100",
+      "ioValues": [
+        {
+          "name": "xDist",
+          "ioValue": 0
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.5408406026962729,
+      "y": 0.7204968944099379,
+      "uniqueID": "id-110",
+      "ioValues": [
+        {
+          "name": "height",
+          "ioValue": 10
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.3903281519861831,
+      "y": 0.3012422360248447,
+      "uniqueID": "id-130",
+      "ioValues": [
+        {
+          "name": "height",
+          "ioValue": 5
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.5368754956383822,
+      "y": 0.3167701863354037,
+      "uniqueID": "id-193",
+      "ioValues": [
+        {
+          "name": "xDist",
+          "ioValue": 0
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 5
+        }
+      ]
+    },
+    {
+      "atomType": "Difference",
+      "x": 0.6445959104186952,
+      "y": 0.42857142857142855,
+      "uniqueID": "id-199"
+    },
+    {
+      "atomType": "Gcode",
+      "x": 0.7916331456154465,
+      "y": 0.6894409937888198,
+      "uniqueID": "id-203",
+      "ioValues": [
+        {
+          "name": "Tool Size",
+          "ioValue": 0.25
+        },
+        {
+          "name": "Passes",
+          "ioValue": 2
+        },
+        {
+          "name": "Speed",
+          "ioValue": 1500
+        },
+        {
+          "name": "Cut Through",
+          "ioValue": 0
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "Molecule"
+        }
+      ],
+      "partName": "Molecule",
+      "sortDirection": "Left"
+    },
+    {
+      "atomType": "Rectangle",
+      "x": 0.20777160983346551,
+      "y": 0.8757763975155279,
+      "uniqueID": "id-238",
+      "ioValues": [
+        {
+          "name": "x length",
+          "ioValue": 30
+        },
+        {
+          "name": "y length",
+          "ioValue": 30
+        }
+      ]
+    },
+    {
+      "atomType": "Export",
+      "x": 0.6748612212529738,
+      "y": 0.782608695652174,
+      "uniqueID": "id-274",
+      "ioValues": [
+        {
+          "name": "File Type",
+          "ioValue": "STL"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "Molecule"
+        }
+      ],
+      "type": null,
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "Molecule"
+    },
+    {
+      "atomType": "Gcode",
+      "x": 0.7357512953367876,
+      "y": 0.21428571428571427,
+      "uniqueID": "id-314",
+      "ioValues": [
+        {
+          "name": "Tool Size",
+          "ioValue": 6.35
+        },
+        {
+          "name": "Passes",
+          "ioValue": 1
+        },
+        {
+          "name": "Speed",
+          "ioValue": 1500
+        },
+        {
+          "name": "Cut Through",
+          "ioValue": 0
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "Molecule"
+        }
+      ],
+      "partName": "Molecule",
+      "sortDirection": "Left"
+    },
+    {
+      "atomType": "Input",
+      "x": 0.031349999999999996,
+      "y": 0.5031055900621119,
+      "uniqueID": "id-361",
+      "name": "wood",
+      "type": "number"
     }
   ],
   "allConnectors": [
     {
       "ap2Name": "geometry",
-      "ap1ID": "id-381",
-      "ap2ID": "id-377"
+      "ap1ID": "1b9e4495-2958-490f-b191-17e032057477",
+      "ap2ID": "id-130"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-100",
+      "ap2ID": "id-110"
+    },
+    {
+      "ap2Name": "geometry1",
+      "ap1ID": "id-110",
+      "ap2ID": "id-199"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-130",
+      "ap2ID": "id-193"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-130",
+      "ap2ID": "id-314"
+    },
+    {
+      "ap2Name": "geometry2",
+      "ap1ID": "id-193",
+      "ap2ID": "id-199"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-199",
+      "ap2ID": "d3e25771-0f7c-4215-a122-f7c1045f96fc"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-199",
+      "ap2ID": "id-203"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-199",
+      "ap2ID": "id-274"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-238",
+      "ap2ID": "id-100"
+    },
+    {
+      "ap2Name": "y length",
+      "ap1ID": "id-361",
+      "ap2ID": "1b9e4495-2958-490f-b191-17e032057477"
     }
   ],
   "unitsKey": "MM",
