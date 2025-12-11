@@ -198,8 +198,7 @@
         },
         {
           "name": "Cut Through",
-          "ioValue": 0.25,
-          "currentEquation": ".25"
+          "ioValue": 0.25
         },
         {
           "name": "Part Name",
@@ -301,8 +300,8 @@
     },
     {
       "atomType": "Code",
-      "x": 0.7542457542457542,
-      "y": 0.39751552795031053,
+      "x": 0.7550335570469798,
+      "y": 0.3819875776397516,
       "uniqueID": "id-720",
       "ioValues": [
         {
