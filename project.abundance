@@ -87,12 +87,12 @@
     },
     {
       "atomType": "Code",
-      "x": 0.5078809106830122,
-      "y": 0.7142857142857143,
-      "uniqueID": "id-812",
+      "x": 0.5306479859894921,
+      "y": 0.6677018633540373,
+      "uniqueID": "id-835",
       "ioValues": [
         {
-          "name": "dist",
+          "name": "radius",
           "ioValue": 5
         },
         {
@@ -101,7 +101,7 @@
         }
       ],
       "codeVersion": 1,
-      "code": "\nconst Inputs = [\n  {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n  {inputName: \"dist\", type: \"number\", defaultValue: 5},\n  {inputName: \"height\", type: \"number\", defaultValue: 10}\n]\n//This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n\n//Gets the shape from the library - no need to clone or access geometry directly\nlet importedShape = library[shape]\n\n//Use the built-in Move function to move the shape in the X direction\nlet movedShape = await Move(importedShape, dist, 0, 0)\n\n//Use the built-in Rotate function to rotate the shape\nlet rotatedShape = await Rotate(importedShape, 0, 45, 0)\n\n//Use the built-in Scale function to make the shape smaller\nlet scaledShape = await Scale(importedShape, 0.8)\n\n//Console.log works for debugging to better see what is happening under the hood\nconsole.log(\"Original shape bounds:\", GetBounds(importedShape))\nconsole.log(\"Moved shape bounds:\", GetBounds(movedShape))\n\n//Create a new shape from scratch using replicad\nlet createdRectangle = replicad.drawRectangle(5, 7)\nconst newPlane = new replicad.Plane().pivot(0, 'Y')\nlet createdShape = createdRectangle.sketchOnPlane(newPlane).extrude(height)\n\n//Wrap the raw replicad geometry as an Abundance Object\nlet shape2 = {\n  geometry: [createdShape],\n  dimension: \"3D\",\n  tags: [\"createdShape\"],\n  color: '#A3CE5B',\n  plane: newPlane,\n  bom: []\n}\n\n//Use the built-in Fillet function to round the edges\nlet filletedShape = await Fillet(shape2, 0.5)\n\n//Use the built-in Chamfer function to bevel the edges  \nlet chamferedShape = await Chamfer(movedShape, 0.3)\n\n//Use the built-in Assembly function to combine multiple shapes\nlet finalAssembly = await Assembly([rotatedShape, scaledShape, filletedShape, chamferedShape])\nlet assembl = await Assembly([chamferedShape,filletedShape])\n\n//You can also create boolean operations using Intersect\n//let intersection = await Intersect(movedShape, rotatedShape)\n\nreturn assembl\n\n/**\nBuilt-in Functions Available:\n- Move(geometry, x, y, z) - Move a shape in 3D space\n- Rotate(geometry, x, y, z) - Rotate a shape around X, Y, Z axes (degrees)\n- Scale(geometry, factor) - Scale a shape by a factor\n- Assembly([shapes]) - Combine multiple shapes into an assembly\n- Intersect(shape1, shape2) - Boolean intersection of two shapes\n- GetBounds(geometry) - Get the bounding box of a shape\n- Fillet(geometry, radius) - Round edges with specified radius\n- Chamfer(geometry, size) - Bevel edges with specified size\n\nTo Use the Code Atom, enter your inputs to the input list as an object array:\nconst Inputs = [\n  {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n  {inputName: \"dist\", type: \"number\", defaultValue: 5},\n  {inputName: \"height\", type: \"number\", defaultValue: 10}\n]\n\nAccess imported geometry using library[inputName] - the built-in functions handle \nthe complexity of accessing geometry arrays and maintaining metadata automatically.\n\nSimple Example - Move a shape:\n   const Inputs = [\n    {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n    {inputName: \"x\", type: \"number\", defaultValue: 5}\n  ]\n  let movedShape = await Move(library[shape], x, 0, 0)\n  return movedShape\n*/\n      "
+      "code": "\n// Example Code\nconst Inputs = [\n  { inputName: \"shape\", type: \"geometry\", defaultValue: null },\n  { inputName: \"radius\", type: \"number\", defaultValue: 5 },\n  { inputName: \"height\", type: \"number\", defaultValue: 10 }\n];\n\nlet importedShape = library[shape];\nlet newPlane = replicad.makePlane()\nlet circDraw = replicad.drawCircle(radius)\nlet sketchCir = circDraw.sketchOnPlane(newPlane)\nlet cyl = sketchCir.extrude(height)\nlet cylObj = {\n  geometry: [cyl],\n  dimension: \"3D\",\n  tags: [\"createdCylinder\"],\n  color: \"#A3CE5B\",\n  plane: null,\n  bom: []\n};\n\nlet assembly = await Assembly([importedShape, cylObj]);\nreturn assembly;\n"
     }
   ],
   "allConnectors": [
@@ -118,7 +118,7 @@
     {
       "ap2Name": "shape",
       "ap1ID": "id-130",
-      "ap2ID": "id-812"
+      "ap2ID": "id-835"
     },
     {
       "ap2Name": "y length",
