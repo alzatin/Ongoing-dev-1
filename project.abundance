@@ -36,8 +36,8 @@
     },
     {
       "atomType": "Input",
-      "x": 0.031349999999999996,
-      "y": 0.19,
+      "x": 0.0264,
+      "y": 0.16,
       "uniqueID": "id-361",
       "name": "wood",
       "type": "number"
@@ -115,10 +115,50 @@
       "x": 0.8106508875739645,
       "y": 0.4501510574018127,
       "uniqueID": "id-974",
-      "ioValues": []
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": null
+        }
+      ]
     }
   ],
-  "allConnectors": [],
+  "allConnectors": [
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "1b9e4495-2958-490f-b191-17e032057477",
+      "ap2ID": "id-903"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-903",
+      "ap2ID": "id-974"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-928",
+      "ap2ID": "id-929"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-948",
+      "ap2ID": "id-949"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-949",
+      "ap2ID": "id-974"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-974",
+      "ap2ID": "d3e25771-0f7c-4215-a122-f7c1045f96fc"
+    }
+  ],
   "unitsKey": "MM",
   "fileTypeVersion": 1,
   "filetypeVersion": 1
