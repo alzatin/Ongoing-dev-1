@@ -13,30 +13,6 @@
       "uniqueID": "d3e25771-0f7c-4215-a122-f7c1045f96fc"
     },
     {
-      "atomType": "Circle",
-      "x": 0.23076923076923078,
-      "y": 0.6435045317220544,
-      "uniqueID": "id-1023",
-      "ioValues": [
-        {
-          "name": "diameter",
-          "ioValue": 10
-        }
-      ]
-    },
-    {
-      "atomType": "Extrude",
-      "x": 0.49034482758620695,
-      "y": 0.5603448275862069,
-      "uniqueID": "id-1026",
-      "ioValues": [
-        {
-          "name": "height",
-          "ioValue": 10
-        }
-      ]
-    },
-    {
       "atomType": "Rectangle",
       "x": 0.6778889899909009,
       "y": 0.3202416918429003,
@@ -51,20 +27,113 @@
           "ioValue": 10
         }
       ]
-    }
-  ],
-  "allConnectors": [
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-1023",
-      "ap2ID": "id-1026"
     },
     {
-      "ap2Name": "number or geometry",
-      "ap1ID": "id-1026",
-      "ap2ID": "d3e25771-0f7c-4215-a122-f7c1045f96fc"
+      "atomType": "Molecule",
+      "x": 0.42344827586206896,
+      "y": 0.5431034482758621,
+      "uniqueID": "id-1047",
+      "name": "New Molecule",
+      "ioValues": [
+        {
+          "name": "Wood",
+          "ioValue": 10
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-1049"
+        },
+        {
+          "atomType": "Molecule",
+          "x": 0.4613793103448276,
+          "y": 0.5172413793103449,
+          "uniqueID": "id-1060",
+          "name": "New Molecule",
+          "ioValues": [
+            {
+              "name": "Wood",
+              "ioValue": 10
+            }
+          ],
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 0.98,
+              "y": 0.5,
+              "uniqueID": "id-1062"
+            },
+            {
+              "atomType": "Circle",
+              "x": 0.3351724137931034,
+              "y": 0.4655172413793103,
+              "uniqueID": "id-1064",
+              "ioValues": [
+                {
+                  "name": "diameter",
+                  "ioValue": 10,
+                  "currentEquation": "Wood"
+                }
+              ]
+            },
+            {
+              "atomType": "Extrude",
+              "x": 0.5893103448275863,
+              "y": 0.4931034482758621,
+              "uniqueID": "id-1065",
+              "ioValues": [
+                {
+                  "name": "height",
+                  "ioValue": 10
+                }
+              ]
+            },
+            {
+              "atomType": "Input",
+              "x": 0.0264,
+              "y": 0.4367816091954023,
+              "uniqueID": "id-1076",
+              "name": "Wood"
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-1064",
+              "ap2ID": "id-1065"
+            },
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-1065",
+              "ap2ID": "id-1062"
+            }
+          ],
+          "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0264,
+          "y": 0.30459770114942525,
+          "uniqueID": "id-1073",
+          "name": "Wood"
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-1060",
+          "ap2ID": "id-1049"
+        }
+      ],
+      "fileTypeVersion": 1
     }
   ],
+  "allConnectors": [],
   "unitsKey": "MM",
   "fileTypeVersion": 1,
   "filetypeVersion": 1
