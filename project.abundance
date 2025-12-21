@@ -29,6 +29,54 @@
       ]
     },
     {
+      "atomType": "Extrude",
+      "x": 0.3593103448275862,
+      "y": 0.45402298850574707,
+      "uniqueID": "id-1152",
+      "ioValues": [
+        {
+          "name": "height",
+          "ioValue": 10
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.4068965517241379,
+      "y": 0.6005747126436781,
+      "uniqueID": "id-1156",
+      "ioValues": [
+        {
+          "name": "xDist",
+          "ioValue": 5
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.6048275862068966,
+      "y": 0.5977011494252873,
+      "uniqueID": "id-1162",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": null
+        }
+      ]
+    },
+    {
       "atomType": "GitHubMolecule",
       "x": 0.5048275862068965,
       "y": 0.382183908045977,
@@ -192,8 +240,7 @@
             },
             {
               "name": "plane",
-              "ioValue": "Y",
-              "currentEquation": "X"
+              "ioValue": "Y"
             }
           ],
           "codeVersion": 1,
@@ -292,54 +339,6 @@
       },
       "unitsKey": "Unitless",
       "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Extrude",
-      "x": 0.3593103448275862,
-      "y": 0.45402298850574707,
-      "uniqueID": "id-1152",
-      "ioValues": [
-        {
-          "name": "height",
-          "ioValue": 10
-        }
-      ]
-    },
-    {
-      "atomType": "Move",
-      "x": 0.4068965517241379,
-      "y": 0.6005747126436781,
-      "uniqueID": "id-1156",
-      "ioValues": [
-        {
-          "name": "xDist",
-          "ioValue": 5
-        },
-        {
-          "name": "yDist",
-          "ioValue": 0
-        },
-        {
-          "name": "zDist",
-          "ioValue": 0
-        }
-      ]
-    },
-    {
-      "atomType": "Assembly",
-      "x": 0.6048275862068966,
-      "y": 0.5977011494252873,
-      "uniqueID": "id-1162",
-      "ioValues": [
-        {
-          "name": "Shape 1",
-          "ioValue": null
-        },
-        {
-          "name": "Shape 2",
-          "ioValue": null
-        }
-      ]
     }
   ],
   "allConnectors": [
@@ -347,11 +346,6 @@
       "ap2Name": "geometry",
       "ap1ID": "id-1035",
       "ap2ID": "id-1152"
-    },
-    {
-      "ap2Name": "Shape 2",
-      "ap1ID": "id-1113",
-      "ap2ID": "id-1162"
     },
     {
       "ap2Name": "geometry",
@@ -366,6 +360,11 @@
     {
       "ap2Name": "Shape 1",
       "ap1ID": "id-1156",
+      "ap2ID": "id-1162"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-1113",
       "ap2ID": "id-1162"
     }
   ],
