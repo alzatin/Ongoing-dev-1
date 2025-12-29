@@ -96,8 +96,8 @@
     },
     {
       "atomType": "Gcode",
-      "x": 0.8636003172085647,
-      "y": 0.7250755287009063,
+      "x": 0.8666210670314638,
+      "y": 0.7220543806646527,
       "uniqueID": "id-1255",
       "ioValues": [
         {
@@ -124,6 +124,32 @@
       ],
       "partName": "Test-dev-december-2",
       "sortDirection": "Left"
+    },
+    {
+      "atomType": "Export",
+      "x": 0.811217510259918,
+      "y": 0.3323262839879154,
+      "uniqueID": "id-1286",
+      "ioValues": [
+        {
+          "name": "File Type",
+          "ioValue": "STL",
+          "currentEquation": "STL"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "Test-dev-december-2",
+          "currentEquation": "Test-dev-december-2"
+        }
+      ],
+      "type": null,
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "Test-dev-december-2"
     }
   ],
   "allConnectors": [
@@ -156,6 +182,11 @@
       "ap2Name": "geometry",
       "ap1ID": "id-1227",
       "ap2ID": "id-1255"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1227",
+      "ap2ID": "id-1286"
     },
     {
       "ap2Name": "geometry2",
