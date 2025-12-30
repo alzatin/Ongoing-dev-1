@@ -19,9 +19,44 @@
       "uniqueID": "d3e25771-0f7c-4215-a122-f7c1045f96fc"
     },
     {
+      "atomType": "Input",
+      "x": 0.0264,
+      "y": 0.16,
+      "uniqueID": "id-1619",
+      "type": "number"
+    },
+    {
+      "atomType": "Rectangle",
+      "x": 0.15943238731218698,
+      "y": 0.6646525679758308,
+      "uniqueID": "id-1663",
+      "ioValues": [
+        {
+          "name": "x length",
+          "ioValue": 10
+        },
+        {
+          "name": "y length",
+          "ioValue": 10
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.34390651085141904,
+      "y": 0.6676737160120846,
+      "uniqueID": "id-1667",
+      "ioValues": [
+        {
+          "name": "height",
+          "ioValue": 10
+        }
+      ]
+    },
+    {
       "atomType": "GitHubMolecule",
-      "x": 0.4298831385642738,
-      "y": 0.3413897280966767,
+      "x": 0.5233722871452421,
+      "y": 0.2598187311178248,
       "uniqueID": "id-1595",
       "name": "A-Test-project-6",
       "ioValues": [
@@ -92,7 +127,13 @@
           "atomType": "Circle",
           "x": 0.17195325542570952,
           "y": 0.45921450151057397,
-          "uniqueID": "id-1592"
+          "uniqueID": "id-1592",
+          "ioValues": [
+            {
+              "name": "diameter",
+              "ioValue": 8
+            }
+          ]
         },
         {
           "atomType": "Extrude",
@@ -172,49 +213,179 @@
       "fileTypeVersion": 1
     },
     {
-      "atomType": "Input",
-      "x": 0.0264,
-      "y": 0.40785498489425986,
-      "uniqueID": "id-1619"
-    },
-    {
-      "atomType": "Rectangle",
-      "x": 0.15943238731218698,
-      "y": 0.6646525679758308,
-      "uniqueID": "id-1663",
+      "atomType": "GitHubMolecule",
+      "x": 0.4274661508704062,
+      "y": 0.17522658610271905,
+      "uniqueID": "id-1742",
+      "name": "A-Test-project-6",
       "ioValues": [
         {
-          "name": "x length",
-          "ioValue": 10
+          "name": "diam",
+          "ioValue": 8
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.9682539682539683,
+          "y": 0.5069637883008357,
+          "uniqueID": "id-1743"
         },
         {
-          "name": "y length",
-          "ioValue": 10
-        }
-      ]
-    },
-    {
-      "atomType": "Extrude",
-      "x": 0.34390651085141904,
-      "y": 0.6676737160120846,
-      "uniqueID": "id-1667",
-      "ioValues": [
+          "atomType": "Move",
+          "x": 0.6327212020033389,
+          "y": 0.486404833836858,
+          "uniqueID": "id-1744",
+          "ioValues": [
+            {
+              "name": "xDist",
+              "ioValue": 0
+            },
+            {
+              "name": "yDist",
+              "ioValue": 0
+            },
+            {
+              "name": "zDist",
+              "ioValue": 5
+            }
+          ]
+        },
         {
-          "name": "height",
-          "ioValue": 10
+          "atomType": "Assembly",
+          "x": 0.7979966611018364,
+          "y": 0.6072507552870091,
+          "uniqueID": "id-1745",
+          "ioValues": [
+            {
+              "name": "Shape 1",
+              "ioValue": null
+            }
+          ]
+        },
+        {
+          "atomType": "Code",
+          "x": 0.49749582637729545,
+          "y": 0.4169184290030212,
+          "uniqueID": "id-1746",
+          "ioValues": [
+            {
+              "name": "radius",
+              "ioValue": 5
+            },
+            {
+              "name": "height",
+              "ioValue": 10
+            }
+          ],
+          "codeVersion": 1,
+          "code": "\n// Example Code\nconst Inputs = [\n  { inputName: \"shape\", type: \"geometry\", defaultValue: null },\n  { inputName: \"radius\", type: \"number\", defaultValue: 5 },\n  { inputName: \"height\", type: \"number\", defaultValue: 10 }\n];\n\nlet importedShape = library[shape];\nlet newPlane = replicad.makePlane()\nlet circDraw = replicad.drawCircle(radius)\nlet sketchCir = circDraw.sketchOnPlane(newPlane)\nlet cyl = sketchCir.extrude(height)\nlet cylObj = {\n  geometry: [importedShape],\n  dimension: \"3D\",\n  tags: [\"createdCylinder\"],\n  color: \"#A3CE5B\",\n  plane: null,\n  bom: []\n};\n\nlet assembly = await Assembly([importedShape, cylObj]);\nreturn assembly;\n"
+        },
+        {
+          "atomType": "Circle",
+          "x": 0.17195325542570952,
+          "y": 0.45921450151057397,
+          "uniqueID": "id-1747",
+          "ioValues": [
+            {
+              "name": "diameter",
+              "ioValue": 8
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.31886477462437396,
+          "y": 0.4471299093655589,
+          "uniqueID": "id-1748",
+          "ioValues": [
+            {
+              "name": "height",
+              "ioValue": 10
+            }
+          ]
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0264,
+          "y": 0.16,
+          "uniqueID": "id-1749",
+          "name": "diam"
         }
-      ]
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "Shape 1",
+          "ap1ID": "id-1744",
+          "ap2ID": "id-1745"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-1745",
+          "ap2ID": "id-1743"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-1746",
+          "ap2ID": "id-1744"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-1747",
+          "ap2ID": "id-1748"
+        },
+        {
+          "ap2Name": "shape",
+          "ap1ID": "id-1748",
+          "ap2ID": "id-1746"
+        },
+        {
+          "ap2Name": "diameter",
+          "ap1ID": "id-1749",
+          "ap2ID": "id-1747"
+        }
+      ],
+      "parentRepo": {
+        "lastFoundGit": "2025-12-30T10:23:39.248Z",
+        "privateRepo": false,
+        "repoName": "A-Test-project-6",
+        "dateCreated": "2025-05-06T21:56:29Z",
+        "readMe": "https://raw.githubusercontent.com/alzatin/A-Test-project-6/master/README.md?sanitize=true",
+        "yyyy": 2025,
+        "topMoleculeID": 1746568589948,
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/alzatin/A-Test-project-6",
+        "topics": [],
+        "parentRepo": "BarbourSmith/A-Test-project-6",
+        "forks": 0,
+        "dateModified": "739615",
+        "ranking": 0,
+        "searchField": "a-test-project-6 alzatin null ",
+        "owner": "alzatin",
+        "description": null,
+        "contentURL": "https://raw.githubusercontent.com/alzatin/A-Test-project-6/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/alzatin/A-Test-project-6/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "MM",
+      "fileTypeVersion": 1
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.4315525876460768,
-      "y": 0.5861027190332326,
-      "uniqueID": "id-1681",
-      "name": "Fillet-",
+      "x": 0.5502901353965184,
+      "y": 0.5770392749244713,
+      "uniqueID": "id-1786",
+      "name": "Mirror",
       "ioValues": [
         {
-          "name": "Radius",
-          "ioValue": 2
+          "name": "Pivot",
+          "ioValue": 90
+        },
+        {
+          "name": "Plane",
+          "ioValue": "X",
+          "currentEquation": "X"
         }
       ],
       "topLevel": false,
@@ -223,21 +394,39 @@
           "atomType": "Output",
           "x": 0.98,
           "y": 0.5,
-          "uniqueID": "id-1672"
+          "uniqueID": "id-1774"
         },
         {
           "atomType": "Input",
           "x": 0.0264,
           "y": 0.16,
-          "uniqueID": "id-1673",
+          "uniqueID": "id-1775",
           "name": "Shape",
           "type": "geometry"
         },
         {
+          "atomType": "Code",
+          "x": 0.5916061339790154,
+          "y": 0.5807453416149069,
+          "uniqueID": "id-1776",
+          "ioValues": [
+            {
+              "name": "pivot",
+              "ioValue": 90
+            },
+            {
+              "name": "plane",
+              "ioValue": "X"
+            }
+          ],
+          "codeVersion": 1,
+          "code": "\n      const Inputs = [\n       {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n        {inputName: \"pivot\", type: \"number\", defaultValue: 90},\n        {inputName: \"plane\", type: \"string\", defaultValue: \"X\"}\n        \n        ]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n\n      //Gets the shape from the library - no need to clone or access geometry directly\n      let importedShape = library[shape]\n\n      const newPlane = new replicad.Plane().pivot(pivot, plane)\n      console.log(importedShape)\n      let mirroredShape = importedShape.geometry[0].mirror(newPlane,(0,0,0))\n\n\n      //Wrap the raw replicad geometry in our assembly format\n      let shape2 = {\n          geometry: [mirroredShape],\n          dimension: \"3D\",\n          tags: [\"createdShape\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n    \n      return shape2\n\n      /**\n      Built-in Functions Available:\n      - Move(geometry, x, y, z) - Move a shape in 3D space\n      - Rotate(geometry, x, y, z) - Rotate a shape around X, Y, Z axes (degrees)\n      - Scale(geometry, factor) - Scale a shape by a factor\n      - Assembly([shapes]) - Combine multiple shapes into an assembly\n      - Intersect(shape1, shape2) - Boolean intersection of two shapes\n      - GetBounds(geometry) - Get the bounding box of a shape\n      - Fillet(geometry, radius) - Round edges with specified radius\n      - Chamfer(geometry, size) - Bevel edges with specified size\n\n      To Use the Code Atom, enter your inputs to the input list as an object array:\n      const Inputs = [\n        {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n        {inputName: \"dist\", type: \"number\", defaultValue: 5},\n        {inputName: \"height\", type: \"number\", defaultValue: 10}\n      ]\n\n      Access imported geometry using library[inputName] - the built-in functions handle \n      the complexity of accessing geometry arrays and maintaining metadata automatically.\n\n      Simple Example - Move a shape:\n         const Inputs = [\n          {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n          {inputName: \"x\", type: \"number\", defaultValue: 5}\n        ]\n        let movedShape = await Move(library[shape], x, 0, 0)\n        return movedShape\n      */\n      "
+        },
+        {
           "atomType": "Rectangle",
-          "x": 0.15013227513227512,
-          "y": 0.2562674094707521,
-          "uniqueID": "id-1674",
+          "x": 0.15577078288942697,
+          "y": 0.6583850931677019,
+          "uniqueID": "id-1777",
           "ioValues": [
             {
               "name": "x length",
@@ -251,13 +440,33 @@
         },
         {
           "atomType": "Extrude",
-          "x": 0.3353174603174603,
-          "y": 0.15598885793871867,
-          "uniqueID": "id-1675",
+          "x": 0.27199354317998387,
+          "y": 0.7981366459627329,
+          "uniqueID": "id-1778",
           "ioValues": [
             {
               "name": "height",
+              "ioValue": 1
+            }
+          ]
+        },
+        {
+          "atomType": "Move",
+          "x": 0.40274414850686036,
+          "y": 0.7111801242236025,
+          "uniqueID": "id-1779",
+          "ioValues": [
+            {
+              "name": "xDist",
+              "ioValue": 0
+            },
+            {
+              "name": "yDist",
               "ioValue": 10
+            },
+            {
+              "name": "zDist",
+              "ioValue": 0
             }
           ]
         },
@@ -265,130 +474,443 @@
           "atomType": "Input",
           "x": 0.0264,
           "y": 0.256,
-          "uniqueID": "id-1676",
-          "name": "Radius",
+          "uniqueID": "id-1780",
+          "name": "Pivot",
           "type": "number"
         },
         {
-          "atomType": "Code",
-          "x": 0.4920634920634921,
-          "y": 0.5766016713091923,
-          "uniqueID": "id-1677",
-          "codeVersion": 1,
-          "code": "      //Inputs:[inputShape, radius]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n      \n      //Takes the address and gets the shape from the library\n      let importedShape = library[inputShape]\n      \n      //This makes a new copy of of the shape (to prevent garbage collection issues),\n      //and moves it in the X direction. Note that this will not work if the input is an assembly\n      let chamferedShape = await Fillet(inputShape, radius);\n      \n      \n      //Shapes stored in the library have tags, a color, a plane, and a bill of materials like this. We don't modify them here\n      let shape1 = {\n        geometry: [chamferedShape],\n        tags: importedShape.tags,\n        color: importedShape.color,\n        plane: importedShape.plane,\n        bom: importedShape.bom\n      }\n      \n      //We could at this point return shape1 as a complete shape and it will be automatically written to the library for us\n      return shape1"
+          "atomType": "Assembly",
+          "x": 0.6892655367231638,
+          "y": 0.7919254658385093,
+          "uniqueID": "id-1781",
+          "ioValues": [
+            {
+              "name": "Shape 1",
+              "ioValue": null
+            },
+            {
+              "name": "Shape 3",
+              "ioValue": null
+            }
+          ]
+        },
+        {
+          "atomType": "Readme",
+          "x": 0.8062953995157386,
+          "y": 0.7236024844720497,
+          "uniqueID": "id-1782",
+          "name": "README",
+          "readMeText": "Mirror a given shape",
+          "global": true
+        },
+        {
+          "atomType": "Rotate",
+          "x": 0.4963680387409201,
+          "y": 0.7732919254658385,
+          "uniqueID": "id-1783",
+          "ioValues": [
+            {
+              "name": "x-axis degrees",
+              "ioValue": 0
+            },
+            {
+              "name": "y-axis degrees",
+              "ioValue": 30
+            },
+            {
+              "name": "z-axis degrees",
+              "ioValue": 0
+            }
+          ]
         },
         {
           "atomType": "Code",
-          "x": 0.3597883597883598,
-          "y": 0.777158774373259,
-          "uniqueID": "id-1678",
+          "x": 0.4971751412429379,
+          "y": 0.32919254658385094,
+          "uniqueID": "id-1784",
           "ioValues": [
             {
-              "name": "radius",
-              "ioValue": 2
+              "name": "pivot",
+              "ioValue": 90
+            },
+            {
+              "name": "plane",
+              "ioValue": "X",
+              "currentEquation": "X"
             }
           ],
           "codeVersion": 1,
-          "code": "      //Inputs:[inputShape, radius]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n      \n      //Takes the address and gets the shape from the library\n      let importedShape = library[inputShape]\n      \n      //This makes a new copy of of the shape (to prevent garbage collection issues),\n      //and moves it in the X direction. Note that this will not work if the input is an assembly\n      let chamferedShape = await Fillet(inputShape, radius);\n      \n      \n      //Shapes stored in the library have tags, a color, a plane, and a bill of materials like this. We don't modify them here\n      let shape1 = {\n        geometry: [chamferedShape],\n        tags: importedShape.tags,\n        color: importedShape.color,\n        plane: importedShape.plane,\n        bom: importedShape.bom\n      }\n      \n      //We could at this point return shape1 as a complete shape and it will be automatically written to the library for us\n      return shape1"
+          "code": "\n      const Inputs = [\n       {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n        {inputName: \"pivot\", type: \"number\", defaultValue: 90},\n        {inputName: \"plane\", type: \"string\", defaultValue: \"X\"}\n        \n        ]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n\n      //Gets the shape from the library - no need to clone or access geometry directly\n      let importedShape = library[shape]\n\n      const newPlane = new replicad.Plane().pivot(pivot, plane)\n      console.log(importedShape)\n      let mirroredShape = importedShape.geometry[0].mirror(newPlane,(0,0,0))\n\n\n      //Wrap the raw replicad geometry in our assembly format\n      let shape2 = {\n          geometry: [mirroredShape],\n          dimension: \"3D\",\n          tags: [\"createdShape\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n    \n      return shape2\n\n      /**\n      Built-in Functions Available:\n      - Move(geometry, x, y, z) - Move a shape in 3D space\n      - Rotate(geometry, x, y, z) - Rotate a shape around X, Y, Z axes (degrees)\n      - Scale(geometry, factor) - Scale a shape by a factor\n      - Assembly([shapes]) - Combine multiple shapes into an assembly\n      - Intersect(shape1, shape2) - Boolean intersection of two shapes\n      - GetBounds(geometry) - Get the bounding box of a shape\n      - Fillet(geometry, radius) - Round edges with specified radius\n      - Chamfer(geometry, size) - Bevel edges with specified size\n\n      To Use the Code Atom, enter your inputs to the input list as an object array:\n      const Inputs = [\n        {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n        {inputName: \"dist\", type: \"number\", defaultValue: 5},\n        {inputName: \"height\", type: \"number\", defaultValue: 10}\n      ]\n\n      Access imported geometry using library[inputName] - the built-in functions handle \n      the complexity of accessing geometry arrays and maintaining metadata automatically.\n\n      Simple Example - Move a shape:\n         const Inputs = [\n          {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n          {inputName: \"x\", type: \"number\", defaultValue: 5}\n        ]\n        let movedShape = await Move(library[shape], x, 0, 0)\n        return movedShape\n      */\n      "
         },
         {
-          "atomType": "Rectangle",
-          "x": 0.07738095238095238,
-          "y": 0.8495821727019498,
-          "uniqueID": "id-1679",
-          "ioValues": [
-            {
-              "name": "x length",
-              "ioValue": 100
-            },
-            {
-              "name": "y length",
-              "ioValue": 100
-            }
-          ]
-        },
-        {
-          "atomType": "Extrude",
-          "x": 0.17539682539682538,
-          "y": 0.8217270194986073,
-          "uniqueID": "id-1680",
-          "ioValues": [
-            {
-              "name": "height",
-              "ioValue": 100
-            }
-          ]
+          "atomType": "Input",
+          "x": 0.0264,
+          "y": 0.352,
+          "uniqueID": "id-1785",
+          "name": "Plane",
+          "type": "string"
         }
       ],
       "allConnectors": [
         {
-          "ap2Name": "inputShape",
-          "ap1ID": "id-1673",
-          "ap2ID": "id-1677"
+          "ap2Name": "shape",
+          "ap1ID": "id-1775",
+          "ap2ID": "id-1784"
+        },
+        {
+          "ap2Name": "Shape 1",
+          "ap1ID": "id-1776",
+          "ap2ID": "id-1781"
         },
         {
           "ap2Name": "geometry",
-          "ap1ID": "id-1674",
-          "ap2ID": "id-1675"
+          "ap1ID": "id-1777",
+          "ap2ID": "id-1778"
         },
         {
-          "ap2Name": "radius",
-          "ap1ID": "id-1676",
-          "ap2ID": "id-1677"
+          "ap2Name": "geometry",
+          "ap1ID": "id-1778",
+          "ap2ID": "id-1779"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-1779",
+          "ap2ID": "id-1783"
+        },
+        {
+          "ap2Name": "pivot",
+          "ap1ID": "id-1780",
+          "ap2ID": "id-1784"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-1781",
+          "ap2ID": "id-1782"
+        },
+        {
+          "ap2Name": "shape",
+          "ap1ID": "id-1783",
+          "ap2ID": "id-1776"
+        },
+        {
+          "ap2Name": "Shape 3",
+          "ap1ID": "id-1783",
+          "ap2ID": "id-1781"
         },
         {
           "ap2Name": "number or geometry",
-          "ap1ID": "id-1677",
-          "ap2ID": "id-1672"
+          "ap1ID": "id-1784",
+          "ap2ID": "id-1774"
         },
         {
-          "ap2Name": "geometry",
-          "ap1ID": "id-1679",
-          "ap2ID": "id-1680"
-        },
-        {
-          "ap2Name": "inputShape",
-          "ap1ID": "id-1680",
-          "ap2ID": "id-1678"
+          "ap2Name": "plane",
+          "ap1ID": "id-1785",
+          "ap2ID": "id-1784"
         }
       ],
       "parentRepo": {
         "lastFoundGit": "2025-12-30T10:23:39.248Z",
         "privateRepo": false,
-        "repoName": "Fillet-",
-        "dateCreated": "2025-03-13T05:08:33Z",
+        "repoName": "Mirror",
+        "dateCreated": "2025-12-04T15:13:10Z",
         "likes": 0,
-        "readMe": "https://raw.githubusercontent.com/BarbourSmith/Fillet-/master/README.md?sanitize=true",
+        "readMe": "https://raw.githubusercontent.com/alzatin/Mirror/master/README.md?sanitize=true",
         "yyyy": 2025,
-        "topMoleculeID": 1741842512908,
+        "topMoleculeID": "id-2031",
         "githubMoleculesUsed": [],
-        "html_url": "https://github.com/BarbourSmith/Fillet-",
-        "topics": [],
+        "html_url": "https://github.com/alzatin/Mirror",
+        "topics": [
+          "abundance-tool"
+        ],
         "parentRepo": null,
         "forks": 0,
-        "dateModified": "739604",
-        "ranking": 4.2,
-        "searchField": "fillet- barboursmith fillets every edge of an input shape ",
-        "owner": "BarbourSmith",
-        "description": "Fillets every edge of an input shape",
-        "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Fillet-/master/project.abundance?sanitize=true",
-        "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Fillet-/master/project.svg?sanitize=true",
+        "dateModified": "739589",
+        "ranking": 0.3,
+        "searchField": "mirror alzatin tool to mirror a part along an axis  abundance-tool",
+        "owner": "alzatin",
+        "description": "Tool to mirror a part along an axis ",
+        "contentURL": "https://raw.githubusercontent.com/alzatin/Mirror/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/alzatin/Mirror/master/project.svg?sanitize=true",
         "isLocal": false
       },
-      "unitsKey": "MM",
+      "unitsKey": "Unitless",
+      "fileTypeVersion": 1
+    },
+    {
+      "atomType": "GitHubMolecule",
+      "x": 0.562862669245648,
+      "y": 0.7734138972809668,
+      "uniqueID": "id-1825",
+      "name": "Mirror",
+      "ioValues": [
+        {
+          "name": "Pivot",
+          "ioValue": 91
+        },
+        {
+          "name": "Plane",
+          "ioValue": "X",
+          "currentEquation": "X"
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-1826"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0264,
+          "y": 0.16,
+          "uniqueID": "id-1827",
+          "name": "Shape",
+          "type": "geometry"
+        },
+        {
+          "atomType": "Code",
+          "x": 0.5916061339790154,
+          "y": 0.5807453416149069,
+          "uniqueID": "id-1828",
+          "ioValues": [
+            {
+              "name": "pivot",
+              "ioValue": 90
+            },
+            {
+              "name": "plane",
+              "ioValue": "X"
+            }
+          ],
+          "codeVersion": 1,
+          "code": "\n      const Inputs = [\n       {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n        {inputName: \"pivot\", type: \"number\", defaultValue: 90},\n        {inputName: \"plane\", type: \"string\", defaultValue: \"X\"}\n        \n        ]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n\n      //Gets the shape from the library - no need to clone or access geometry directly\n      let importedShape = library[shape]\n\n      const newPlane = new replicad.Plane().pivot(pivot, plane)\n      console.log(importedShape)\n      let mirroredShape = importedShape.geometry[0].mirror(newPlane,(0,0,0))\n\n\n      //Wrap the raw replicad geometry in our assembly format\n      let shape2 = {\n          geometry: [mirroredShape],\n          dimension: \"3D\",\n          tags: [\"createdShape\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n    \n      return shape2\n\n      /**\n      Built-in Functions Available:\n      - Move(geometry, x, y, z) - Move a shape in 3D space\n      - Rotate(geometry, x, y, z) - Rotate a shape around X, Y, Z axes (degrees)\n      - Scale(geometry, factor) - Scale a shape by a factor\n      - Assembly([shapes]) - Combine multiple shapes into an assembly\n      - Intersect(shape1, shape2) - Boolean intersection of two shapes\n      - GetBounds(geometry) - Get the bounding box of a shape\n      - Fillet(geometry, radius) - Round edges with specified radius\n      - Chamfer(geometry, size) - Bevel edges with specified size\n\n      To Use the Code Atom, enter your inputs to the input list as an object array:\n      const Inputs = [\n        {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n        {inputName: \"dist\", type: \"number\", defaultValue: 5},\n        {inputName: \"height\", type: \"number\", defaultValue: 10}\n      ]\n\n      Access imported geometry using library[inputName] - the built-in functions handle \n      the complexity of accessing geometry arrays and maintaining metadata automatically.\n\n      Simple Example - Move a shape:\n         const Inputs = [\n          {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n          {inputName: \"x\", type: \"number\", defaultValue: 5}\n        ]\n        let movedShape = await Move(library[shape], x, 0, 0)\n        return movedShape\n      */\n      "
+        },
+        {
+          "atomType": "Rectangle",
+          "x": 0.15577078288942697,
+          "y": 0.6583850931677019,
+          "uniqueID": "id-1829",
+          "ioValues": [
+            {
+              "name": "x length",
+              "ioValue": 10
+            },
+            {
+              "name": "y length",
+              "ioValue": 10
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.27199354317998387,
+          "y": 0.7981366459627329,
+          "uniqueID": "id-1830",
+          "ioValues": [
+            {
+              "name": "height",
+              "ioValue": 1
+            }
+          ]
+        },
+        {
+          "atomType": "Move",
+          "x": 0.40274414850686036,
+          "y": 0.7111801242236025,
+          "uniqueID": "id-1831",
+          "ioValues": [
+            {
+              "name": "xDist",
+              "ioValue": 0
+            },
+            {
+              "name": "yDist",
+              "ioValue": 10
+            },
+            {
+              "name": "zDist",
+              "ioValue": 0
+            }
+          ]
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0264,
+          "y": 0.256,
+          "uniqueID": "id-1832",
+          "name": "Pivot",
+          "type": "number"
+        },
+        {
+          "atomType": "Assembly",
+          "x": 0.6892655367231638,
+          "y": 0.7919254658385093,
+          "uniqueID": "id-1833",
+          "ioValues": [
+            {
+              "name": "Shape 1",
+              "ioValue": null
+            },
+            {
+              "name": "Shape 3",
+              "ioValue": null
+            }
+          ]
+        },
+        {
+          "atomType": "Readme",
+          "x": 0.8062953995157386,
+          "y": 0.7236024844720497,
+          "uniqueID": "id-1834",
+          "name": "README",
+          "readMeText": "Mirror a given shape",
+          "global": true
+        },
+        {
+          "atomType": "Rotate",
+          "x": 0.4963680387409201,
+          "y": 0.7732919254658385,
+          "uniqueID": "id-1835",
+          "ioValues": [
+            {
+              "name": "x-axis degrees",
+              "ioValue": 0
+            },
+            {
+              "name": "y-axis degrees",
+              "ioValue": 30
+            },
+            {
+              "name": "z-axis degrees",
+              "ioValue": 0
+            }
+          ]
+        },
+        {
+          "atomType": "Code",
+          "x": 0.4971751412429379,
+          "y": 0.32919254658385094,
+          "uniqueID": "id-1836",
+          "ioValues": [
+            {
+              "name": "pivot",
+              "ioValue": 91
+            },
+            {
+              "name": "plane",
+              "ioValue": "X"
+            }
+          ],
+          "codeVersion": 1,
+          "code": "\n      const Inputs = [\n       {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n        {inputName: \"pivot\", type: \"number\", defaultValue: 90},\n        {inputName: \"plane\", type: \"string\", defaultValue: \"X\"}\n        \n        ]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n\n      //Gets the shape from the library - no need to clone or access geometry directly\n      let importedShape = library[shape]\n\n      const newPlane = new replicad.Plane().pivot(pivot, plane)\n      console.log(importedShape)\n      let mirroredShape = importedShape.geometry[0].mirror(newPlane,(0,0,0))\n\n\n      //Wrap the raw replicad geometry in our assembly format\n      let shape2 = {\n          geometry: [mirroredShape],\n          dimension: \"3D\",\n          tags: [\"createdShape\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n    \n      return shape2\n\n      /**\n      Built-in Functions Available:\n      - Move(geometry, x, y, z) - Move a shape in 3D space\n      - Rotate(geometry, x, y, z) - Rotate a shape around X, Y, Z axes (degrees)\n      - Scale(geometry, factor) - Scale a shape by a factor\n      - Assembly([shapes]) - Combine multiple shapes into an assembly\n      - Intersect(shape1, shape2) - Boolean intersection of two shapes\n      - GetBounds(geometry) - Get the bounding box of a shape\n      - Fillet(geometry, radius) - Round edges with specified radius\n      - Chamfer(geometry, size) - Bevel edges with specified size\n\n      To Use the Code Atom, enter your inputs to the input list as an object array:\n      const Inputs = [\n        {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n        {inputName: \"dist\", type: \"number\", defaultValue: 5},\n        {inputName: \"height\", type: \"number\", defaultValue: 10}\n      ]\n\n      Access imported geometry using library[inputName] - the built-in functions handle \n      the complexity of accessing geometry arrays and maintaining metadata automatically.\n\n      Simple Example - Move a shape:\n         const Inputs = [\n          {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n          {inputName: \"x\", type: \"number\", defaultValue: 5}\n        ]\n        let movedShape = await Move(library[shape], x, 0, 0)\n        return movedShape\n      */\n      "
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0264,
+          "y": 0.352,
+          "uniqueID": "id-1837",
+          "name": "Plane",
+          "type": "string"
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "shape",
+          "ap1ID": "id-1827",
+          "ap2ID": "id-1836"
+        },
+        {
+          "ap2Name": "Shape 1",
+          "ap1ID": "id-1828",
+          "ap2ID": "id-1833"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-1829",
+          "ap2ID": "id-1830"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-1830",
+          "ap2ID": "id-1831"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-1831",
+          "ap2ID": "id-1835"
+        },
+        {
+          "ap2Name": "pivot",
+          "ap1ID": "id-1832",
+          "ap2ID": "id-1836"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-1833",
+          "ap2ID": "id-1834"
+        },
+        {
+          "ap2Name": "shape",
+          "ap1ID": "id-1835",
+          "ap2ID": "id-1828"
+        },
+        {
+          "ap2Name": "Shape 3",
+          "ap1ID": "id-1835",
+          "ap2ID": "id-1833"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-1836",
+          "ap2ID": "id-1826"
+        },
+        {
+          "ap2Name": "plane",
+          "ap1ID": "id-1837",
+          "ap2ID": "id-1836"
+        }
+      ],
+      "parentRepo": {
+        "lastFoundGit": "2025-12-30T10:23:39.248Z",
+        "privateRepo": false,
+        "repoName": "Mirror",
+        "dateCreated": "2025-12-04T15:13:10Z",
+        "likes": 0,
+        "readMe": "https://raw.githubusercontent.com/alzatin/Mirror/master/README.md?sanitize=true",
+        "yyyy": 2025,
+        "topMoleculeID": "id-2031",
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/alzatin/Mirror",
+        "topics": [
+          "abundance-tool"
+        ],
+        "parentRepo": null,
+        "forks": 0,
+        "dateModified": "739589",
+        "ranking": 0.3,
+        "searchField": "mirror alzatin tool to mirror a part along an axis  abundance-tool",
+        "owner": "alzatin",
+        "description": "Tool to mirror a part along an axis ",
+        "contentURL": "https://raw.githubusercontent.com/alzatin/Mirror/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/alzatin/Mirror/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "Unitless",
       "fileTypeVersion": 1
     }
   ],
   "allConnectors": [
     {
-      "ap2Name": "number or geometry",
-      "ap1ID": "id-1595",
-      "ap2ID": "d3e25771-0f7c-4215-a122-f7c1045f96fc"
+      "ap2Name": "diam",
+      "ap1ID": "id-1619",
+      "ap2ID": "id-1595"
     },
     {
       "ap2Name": "diam",
       "ap1ID": "id-1619",
-      "ap2ID": "id-1595"
+      "ap2ID": "id-1742"
     },
     {
       "ap2Name": "geometry",
@@ -398,7 +920,17 @@
     {
       "ap2Name": "Shape",
       "ap1ID": "id-1667",
-      "ap2ID": "id-1681"
+      "ap2ID": "id-1786"
+    },
+    {
+      "ap2Name": "Shape",
+      "ap1ID": "id-1667",
+      "ap2ID": "id-1825"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-1595",
+      "ap2ID": "d3e25771-0f7c-4215-a122-f7c1045f96fc"
     }
   ],
   "unitsKey": "MM",
