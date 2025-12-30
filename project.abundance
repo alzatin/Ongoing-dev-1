@@ -4,6 +4,13 @@
   "y": 0,
   "uniqueID": "01e278b0-4910-484c-bdc0-8458b001eb66",
   "name": "Ongoing-dev-1",
+  "ioValues": [
+    {
+      "name": "Input",
+      "ioValue": 100,
+      "currentEquation": "100"
+    }
+  ],
   "topLevel": true,
   "allAtoms": [
     {
@@ -20,7 +27,7 @@
       "ioValues": [
         {
           "name": "x length",
-          "ioValue": 10
+          "ioValue": 100
         },
         {
           "name": "y length",
@@ -492,6 +499,12 @@
       },
       "unitsKey": "Inches",
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Input",
+      "x": 0.0264,
+      "y": 0.6283987915407855,
+      "uniqueID": "id-1412"
     }
   ],
   "allConnectors": [
@@ -539,6 +552,11 @@
       "ap2Name": "geometry2",
       "ap1ID": "id-1231",
       "ap2ID": "id-1227"
+    },
+    {
+      "ap2Name": "x length",
+      "ap1ID": "id-1412",
+      "ap2ID": "id-1035"
     }
   ],
   "unitsKey": "MM",
