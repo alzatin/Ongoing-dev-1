@@ -7,7 +7,7 @@
   "ioValues": [
     {
       "name": "Pivotno",
-      "ioValue": 50
+      "ioValue": 48
     }
   ],
   "topLevel": true,
@@ -334,14 +334,14 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.5435203094777563,
-      "y": 0.5740181268882175,
+      "x": 0.5589941972920696,
+      "y": 0.6827794561933535,
       "uniqueID": "id-2873",
       "name": "Mirror",
       "ioValues": [
         {
           "name": "Pivot",
-          "ioValue": 50,
+          "ioValue": 48,
           "currentEquation": "Pivotno"
         },
         {
@@ -494,7 +494,7 @@
           "ioValues": [
             {
               "name": "pivot",
-              "ioValue": 50
+              "ioValue": 48
             },
             {
               "name": "plane",
@@ -601,14 +601,14 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.7427466150870405,
-      "y": 0.29003021148036257,
+      "x": 0.7069632495164411,
+      "y": 0.5709969788519638,
       "uniqueID": "id-2912",
       "name": "Mirror",
       "ioValues": [
         {
           "name": "Pivot",
-          "ioValue": 50,
+          "ioValue": 48,
           "currentEquation": "Pivotno"
         },
         {
@@ -761,7 +761,7 @@
           "ioValues": [
             {
               "name": "pivot",
-              "ioValue": 50
+              "ioValue": 48
             },
             {
               "name": "plane",
@@ -882,6 +882,11 @@
       "ap2Name": "Shape",
       "ap1ID": "id-1667",
       "ap2ID": "id-2873"
+    },
+    {
+      "ap2Name": "Shape",
+      "ap1ID": "id-1667",
+      "ap2ID": "id-2912"
     }
   ],
   "unitsKey": "MM",
