@@ -27,14 +27,10 @@
     },
     {
       "atomType": "Rectangle",
-      "x": 0.16731141199226307,
-      "y": 0.4501510574018127,
+      "x": 0.25241779497098643,
+      "y": 0.35347432024169184,
       "uniqueID": "id-1663",
       "ioValues": [
-        {
-          "name": "x length",
-          "ioValue": 8
-        },
         {
           "name": "y length",
           "ioValue": 10
@@ -43,8 +39,8 @@
     },
     {
       "atomType": "Extrude",
-      "x": 0.32688588007736946,
-      "y": 0.40483383685800606,
+      "x": 0.41489361702127664,
+      "y": 0.2326283987915408,
       "uniqueID": "id-1667",
       "ioValues": [
         {
@@ -55,8 +51,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.5735009671179884,
-      "y": 0.22658610271903323,
+      "x": 0.7272727272727273,
+      "y": 0.40785498489425986,
       "uniqueID": "id-1786",
       "name": "Mirror",
       "ioValues": [
@@ -211,17 +207,6 @@
           "x": 0.4971751412429379,
           "y": 0.32919254658385094,
           "uniqueID": "id-1784",
-          "ioValues": [
-            {
-              "name": "pivot",
-              "ioValue": 90
-            },
-            {
-              "name": "plane",
-              "ioValue": "X",
-              "currentEquation": "X"
-            }
-          ],
           "codeVersion": 1,
           "code": "\n      const Inputs = [\n       {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n        {inputName: \"pivot\", type: \"number\", defaultValue: 90},\n        {inputName: \"plane\", type: \"string\", defaultValue: \"X\"}\n        \n        ]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n\n      //Gets the shape from the library - no need to clone or access geometry directly\n      let importedShape = library[shape]\n\n      const newPlane = new replicad.Plane().pivot(pivot, plane)\n      console.log(importedShape)\n      let mirroredShape = importedShape.geometry[0].mirror(newPlane,(0,0,0))\n\n\n      //Wrap the raw replicad geometry in our assembly format\n      let shape2 = {\n          geometry: [mirroredShape],\n          dimension: \"3D\",\n          tags: [\"createdShape\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n    \n      return shape2\n\n      /**\n      Built-in Functions Available:\n      - Move(geometry, x, y, z) - Move a shape in 3D space\n      - Rotate(geometry, x, y, z) - Rotate a shape around X, Y, Z axes (degrees)\n      - Scale(geometry, factor) - Scale a shape by a factor\n      - Assembly([shapes]) - Combine multiple shapes into an assembly\n      - Intersect(shape1, shape2) - Boolean intersection of two shapes\n      - GetBounds(geometry) - Get the bounding box of a shape\n      - Fillet(geometry, radius) - Round edges with specified radius\n      - Chamfer(geometry, size) - Bevel edges with specified size\n\n      To Use the Code Atom, enter your inputs to the input list as an object array:\n      const Inputs = [\n        {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n        {inputName: \"dist\", type: \"number\", defaultValue: 5},\n        {inputName: \"height\", type: \"number\", defaultValue: 10}\n      ]\n\n      Access imported geometry using library[inputName] - the built-in functions handle \n      the complexity of accessing geometry arrays and maintaining metadata automatically.\n\n      Simple Example - Move a shape:\n         const Inputs = [\n          {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n          {inputName: \"x\", type: \"number\", defaultValue: 5}\n        ]\n        let movedShape = await Move(library[shape], x, 0, 0)\n        return movedShape\n      */\n      "
         },
@@ -321,8 +306,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.5841392649903289,
-      "y": 0.5740181268882175,
+      "x": 0.5802707930367504,
+      "y": 0.6012084592145015,
       "uniqueID": "id-2618",
       "name": "Mirror",
       "ioValues": [
@@ -477,17 +462,6 @@
           "x": 0.4971751412429379,
           "y": 0.32919254658385094,
           "uniqueID": "id-2629",
-          "ioValues": [
-            {
-              "name": "pivot",
-              "ioValue": 90
-            },
-            {
-              "name": "plane",
-              "ioValue": "X",
-              "currentEquation": "X"
-            }
-          ],
           "codeVersion": 1,
           "code": "\n      const Inputs = [\n       {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n        {inputName: \"pivot\", type: \"number\", defaultValue: 90},\n        {inputName: \"plane\", type: \"string\", defaultValue: \"X\"}\n        \n        ]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n\n      //Gets the shape from the library - no need to clone or access geometry directly\n      let importedShape = library[shape]\n\n      const newPlane = new replicad.Plane().pivot(pivot, plane)\n      console.log(importedShape)\n      let mirroredShape = importedShape.geometry[0].mirror(newPlane,(0,0,0))\n\n\n      //Wrap the raw replicad geometry in our assembly format\n      let shape2 = {\n          geometry: [mirroredShape],\n          dimension: \"3D\",\n          tags: [\"createdShape\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n    \n      return shape2\n\n      /**\n      Built-in Functions Available:\n      - Move(geometry, x, y, z) - Move a shape in 3D space\n      - Rotate(geometry, x, y, z) - Rotate a shape around X, Y, Z axes (degrees)\n      - Scale(geometry, factor) - Scale a shape by a factor\n      - Assembly([shapes]) - Combine multiple shapes into an assembly\n      - Intersect(shape1, shape2) - Boolean intersection of two shapes\n      - GetBounds(geometry) - Get the bounding box of a shape\n      - Fillet(geometry, radius) - Round edges with specified radius\n      - Chamfer(geometry, size) - Bevel edges with specified size\n\n      To Use the Code Atom, enter your inputs to the input list as an object array:\n      const Inputs = [\n        {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n        {inputName: \"dist\", type: \"number\", defaultValue: 5},\n        {inputName: \"height\", type: \"number\", defaultValue: 10}\n      ]\n\n      Access imported geometry using library[inputName] - the built-in functions handle \n      the complexity of accessing geometry arrays and maintaining metadata automatically.\n\n      Simple Example - Move a shape:\n         const Inputs = [\n          {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n          {inputName: \"x\", type: \"number\", defaultValue: 5}\n        ]\n        let movedShape = await Move(library[shape], x, 0, 0)\n        return movedShape\n      */\n      "
         },
@@ -584,6 +558,18 @@
       },
       "unitsKey": "Unitless",
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Circle",
+      "x": 0.3365570599613153,
+      "y": 0.5770392749244713,
+      "uniqueID": "id-2718",
+      "ioValues": [
+        {
+          "name": "diameter",
+          "ioValue": 10
+        }
+      ]
     }
   ],
   "allConnectors": [
