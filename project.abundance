@@ -59,22 +59,6 @@
       ]
     },
     {
-      "atomType": "Rectangle",
-      "x": 0.23698959167333866,
-      "y": 0.7039274924471299,
-      "uniqueID": "id-3467",
-      "ioValues": [
-        {
-          "name": "x length",
-          "ioValue": 48
-        },
-        {
-          "name": "y length",
-          "ioValue": 10
-        }
-      ]
-    },
-    {
       "atomType": "Extrude",
       "x": 0.5084067253803043,
       "y": 0.5226586102719033,
@@ -82,7 +66,7 @@
       "ioValues": [
         {
           "name": "height",
-          "ioValue": 10
+          "ioValue": 48
         }
       ]
     },
@@ -97,9 +81,9 @@
   ],
   "allConnectors": [
     {
-      "ap2Name": "x length",
+      "ap2Name": "height",
       "ap1ID": "id-1619",
-      "ap2ID": "id-3467"
+      "ap2ID": "id-3468"
     },
     {
       "ap2Name": "geometry",
