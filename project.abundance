@@ -1318,8 +1318,7 @@
             },
             {
               "name": "plane",
-              "ioValue": "X",
-              "currentEquation": "X"
+              "ioValue": "X"
             }
           ],
           "codeVersion": 1,
